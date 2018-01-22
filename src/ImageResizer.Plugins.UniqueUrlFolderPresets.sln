@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageResizer.Plugins.UniqueUrlFolderPresets", "ImageResizer.Plugins.UniqueUrlFolderPresets\ImageResizer.Plugins.UniqueUrlFolderPresets.csproj", "{9E00FD51-7775-4BB6-BF14-A8171C39B4FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageResizer.Plugins.UniqueUrlFolderPresets.Tests", "ImageResizer.Plugins.UniqueUrlFolderPresets.Tests\ImageResizer.Plugins.UniqueUrlFolderPresets.Tests.csproj", "{41769F7E-73F6-43BB-84AE-89D5FBC90E8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E00FD51-7775-4BB6-BF14-A8171C39B4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E00FD51-7775-4BB6-BF14-A8171C39B4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E00FD51-7775-4BB6-BF14-A8171C39B4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E00FD51-7775-4BB6-BF14-A8171C39B4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41769F7E-73F6-43BB-84AE-89D5FBC90E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41769F7E-73F6-43BB-84AE-89D5FBC90E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41769F7E-73F6-43BB-84AE-89D5FBC90E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41769F7E-73F6-43BB-84AE-89D5FBC90E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E88B8E12-EB6D-4DDF-A6BB-B97D038893C7}
+	EndGlobalSection
+EndGlobal

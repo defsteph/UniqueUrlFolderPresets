@@ -1,0 +1,7 @@
+[Oo]bj/
+[Bb]in/
+[Pp]ackages/
+*.suo
+*.user
+*.DotSettings
+src/.vs/
