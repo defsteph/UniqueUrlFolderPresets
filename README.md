@@ -29,7 +29,7 @@ prettier URLs, without all that querystring dirt. By default, the preset keyword
 If a request is made for a preset that doesn't exist, it will result in a 404.
 
 Given that the defaults are left as-is, if there's an ImageResizer preset with the name "test", and a media item with the url "/globalassets/my-media.png",
-calling the url "/optimized/test/globalassets/my-media.png" will issue a redirect to "/optimized/test/<hash>/globalassets/my-media.png", where <hash> is
+calling the url "/optimized/test/globalassets/my-media.png" will issue a redirect to "/optimized/test/\<hash\>/globalassets/my-media.png", where \<hash\> is
 an 8 character long calculated hash for that media item, based on its last saved date. That URL will then give you the media item, with the preset applied, and cache headers
 that will cache the item for a year.
 
