@@ -40,3 +40,6 @@ There are a few tests for the PresetParser, for testing the regular expression.
 
 ### Release 1.0.0
 Initial release.
+
+### Release 1.0.1
+Fixes bug with Regular expression for parsing presets.

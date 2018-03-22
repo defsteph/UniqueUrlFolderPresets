@@ -5,7 +5,7 @@ namespace ImageResizer.Plugins.UniqueUrlFolderPresets
 {
     internal class PresetParser : IPresetParser
     {
-        private const string PresetFolderExpressionFormat = "(?<=^|\\/){0}\\/(?<preset>\\w+)\\/";
+        private const string PresetFolderExpressionFormat = "(?<=^|\\/){0}\\/(?<preset>[a-zA-Z0-9\\-_]+)\\/";
         private readonly Regex _presetFolderExpression;
         public PresetParser(IUniqueUrlFolderPresetsConfiguration configuration)
         {

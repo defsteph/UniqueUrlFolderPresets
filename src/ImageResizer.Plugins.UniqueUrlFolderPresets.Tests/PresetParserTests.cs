@@ -13,6 +13,8 @@ namespace ImageResizer.Plugins.UniqueUrlFolderPresets.Tests
         [Theory]
         [InlineData("optimized/test/xxx/yyy/zzz.png", "test")]
         [InlineData("/optimized/test/xxx/yyy/zzz.png", "test")]
+        [InlineData("/optimized/preset-with-dashes/xxx/yyy/zzz.png", "preset-with-dashes")]
+        [InlineData("/optimized/preset-with-dashes_and_underscores/xxx/yyy/zzz.png", "preset-with-dashes_and_underscores")]
         [InlineData("/xxx/yyy/zzz.png", null)]
         [InlineData("xxx/yyy/zzz.png", null)]
         public void GetPresetFromPath(string url, string expectedPreset)
