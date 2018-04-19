@@ -1,0 +1,8 @@
+language: csharp
+solution: src/ImageResizer.Plugins.UniqueUrlFolderPresets.sln
+install:
+  - nuget restore src/ImageResizer.Plugins.UniqueUrlFolderPresets.sln
+  - nuget install xunit.runner.console -Version 2.3.1 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release src/ImageResizer.Plugins.UniqueUrlFolderPresets.sln
+  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./ImageResizer.Plugins.UniqueUrlFolderPresets.Tests/bin/Release/ImageResizer.Plugins.UniqueUrlFolderPresets.Tests.dll
