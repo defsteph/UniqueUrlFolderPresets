@@ -1,4 +1,5 @@
 # Clean and unique URLs for EPiServer, with support for using ImageResizing.NET presets in a cleaner way.
+[![Build status](https://ci.appveyor.com/api/projects/status/nixydjck1gqq6odg?svg=true)](https://ci.appveyor.com/project/defsteph/uniqueurlfolderpresets)
 
 ## Usage
 Use whatever mechanism you want to prepend resizing presets to your image urls, or use one of the provided UrlHelper extensions
