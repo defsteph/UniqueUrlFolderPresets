@@ -46,3 +46,6 @@ Fixes bug with Regular expression for parsing presets.
 
 ### Release 1.1.0
 Added new helper for doing the rewriting, that can be used outside of the UrlHelperExtension.
+
+### Release 1.2.0
+Added method on IContentHashHelper to remove a hash from a URL.

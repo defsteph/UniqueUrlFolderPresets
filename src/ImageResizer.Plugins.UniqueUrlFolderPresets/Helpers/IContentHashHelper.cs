@@ -11,5 +11,6 @@ namespace ImageResizer.Plugins.UniqueUrlFolderPresets.Helpers
         bool IsHashedPath(string path);
         bool RedirectIfWrongHash(HttpContextBase context, IContent content);
         bool RedirectIfWrongHash(HttpContext context, IContent content);
+        string RemoveHash(string path);
     }
 }

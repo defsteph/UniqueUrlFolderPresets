@@ -10,8 +10,11 @@ namespace ImageResizer.Plugins.UniqueUrlFolderPresets.Helpers
 {
     internal class ContentHashHelper : IContentHashHelper
     {
+        private const string HashPattern = "^/[a-z0-9]{8}";
+        private static readonly Regex HashedUrlExpression = new Regex(HashPattern + "/.+", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+        private static readonly Regex ContentHashExpression = new Regex(HashPattern, RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
         private readonly IUniqueUrlFolderPresetsConfiguration _configuration;
-        private static readonly Regex ContentHashExpression = new Regex("^/[a-z0-9]{8}/.+", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
         public ContentHashHelper(IUniqueUrlFolderPresetsConfiguration configuration)
         {
             _configuration = configuration;
@@ -24,7 +27,7 @@ namespace ImageResizer.Plugins.UniqueUrlFolderPresets.Helpers
         }
         public bool IsHashedPath(string path)
         {
-            return ContentHashExpression.IsMatch(path);
+            return HashedUrlExpression.IsMatch(path);
         }
         public bool RedirectIfWrongHash(HttpContextBase context, IContent content)
         {
@@ -50,6 +53,15 @@ namespace ImageResizer.Plugins.UniqueUrlFolderPresets.Helpers
         public bool RedirectIfWrongHash(HttpContext context, IContent content)
         {
             return RedirectIfWrongHash(new HttpContextWrapper(context), content);
+        }
+
+        public string RemoveHash(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path))
+            {
+                return path;
+            }
+            return ContentHashExpression.Replace(path, string.Empty);
         }
     }
 }
