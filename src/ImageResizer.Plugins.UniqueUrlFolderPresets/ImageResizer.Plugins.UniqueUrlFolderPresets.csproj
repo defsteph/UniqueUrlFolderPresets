@@ -32,6 +32,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Helpers\CacheHelper.cs" />
+    <Compile Include="Helpers\IResizeHelper.cs" />
+    <Compile Include="Helpers\ResizeHelper.cs" />
     <Compile Include="Helpers\RewriteHelper.cs" />
     <Compile Include="Helpers\IContentHashHelper.cs" />
     <Compile Include="Helpers\ContentHashHelper.cs" />

@@ -43,3 +43,6 @@ Initial release.
 
 ### Release 1.0.1
 Fixes bug with Regular expression for parsing presets.
+
+### Release 1.1.0
+Added new helper for doing the rewriting, that can be used outside of the UrlHelperExtension.

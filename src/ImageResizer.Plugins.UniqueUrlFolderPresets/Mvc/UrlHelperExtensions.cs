@@ -4,7 +4,7 @@ using EPiServer.Core;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Mvc.Html;
 
-using ImageResizer.Plugins.UniqueUrlFolderPresets.Configuration;
+using ImageResizer.Plugins.UniqueUrlFolderPresets.Helpers;
 
 namespace ImageResizer.Plugins.UniqueUrlFolderPresets.Mvc
 {
@@ -24,18 +24,10 @@ namespace ImageResizer.Plugins.UniqueUrlFolderPresets.Mvc
 
             return urlHelper.PrependResizingInstruction(url, preset);
         }
+
         public static string PrependResizingInstruction(this UrlHelper urlHelper, string url, string preset)
         {
-            if (string.IsNullOrWhiteSpace(url))
-            {
-                return null;
-            }
-            var resizingInstruction = $"/{ServiceLocator.Current.GetInstance<IUniqueUrlFolderPresetsConfiguration>().BaseSegment}/{preset}";
-            if (url.StartsWith("/"))
-            {
-                return resizingInstruction + url;
-            }
-            return resizingInstruction + "/" + url;
+            return ServiceLocator.Current.GetInstance<IResizeHelper>().PrependResizingInstruction(url, preset);
         }
     }
 }
