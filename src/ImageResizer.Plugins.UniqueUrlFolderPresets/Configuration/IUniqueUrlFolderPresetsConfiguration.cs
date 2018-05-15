@@ -6,5 +6,6 @@ namespace ImageResizer.Plugins.UniqueUrlFolderPresets.Configuration
     {
         string BaseSegment { get; }
         TimeSpan CacheMaxAge { get; }
+        bool Enabled { get; }
     }
 }

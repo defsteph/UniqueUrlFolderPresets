@@ -31,7 +31,7 @@ namespace ImageResizer.Plugins.UniqueUrlFolderPresets.Helpers
         }
         public bool RedirectIfWrongHash(HttpContextBase context, IContent content)
         {
-            if (content != null)
+            if (content != null && _configuration.Enabled)
             {
                 var requestedHash = (string)context.Items[UniqueUrlContext.VersionHashRequestKey];
                 var currentHash = GetSaveDateHash(content);

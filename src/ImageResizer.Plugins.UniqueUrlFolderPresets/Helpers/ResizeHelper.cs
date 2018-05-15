@@ -16,7 +16,7 @@ namespace ImageResizer.Plugins.UniqueUrlFolderPresets.Helpers
 
         public string PrependResizingInstruction(string url, string preset)
         {
-            if (string.IsNullOrWhiteSpace(url) || string.IsNullOrWhiteSpace(preset))
+            if (!_configuration.Enabled || string.IsNullOrWhiteSpace(url) || string.IsNullOrWhiteSpace(preset))
             {
                 return url;
             }

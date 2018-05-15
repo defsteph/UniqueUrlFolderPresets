@@ -50,3 +50,6 @@ Added new helper for doing the rewriting, that can be used outside of the UrlHel
 
 ### Release 1.2.0
 Added method on IContentHashHelper to remove a hash from a URL.
+
+### Release 1.2.1
+Added Enabled property on IUniqueUrlFolderPresetsConfiguration to only run resizing rewrites in teh default context (i.e. not in edit/preview)
